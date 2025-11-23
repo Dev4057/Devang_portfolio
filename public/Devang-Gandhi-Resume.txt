@@ -1,0 +1,94 @@
+Devang Gandhi 
+Pune, Maharashtra, India | 7385234057 | devanggandhi04@gmail.com | LinkedIn | GitHub
+
+================================================================================
+CAREER OBJECTIVE
+================================================================================
+
+Enthusiastic blockchain and cryptocurrency enthusiast who is particularly 
+interested in decentralized systems, consensus processes, and DeFi. Curiosity 
+and a research-based approach motivate me to investigate new blockchain 
+technologies, assess protocols, and help create transparent, effective, and 
+significant Web3 solutions.
+
+================================================================================
+EDUCATION
+================================================================================
+
+AISSMS Institute of Information Technology, Pune                        2022–26
+B.Tech. in Computer Engineering | CGPA: 7.56/10
+
+================================================================================
+SKILLS
+================================================================================
+
+Languages:         Solidity, JavaScript, TypeScript, Python, C++
+Frameworks:        Foundry, Hardhat, Node.js, Next.js
+Blockchain Tools:  Remix, MetaMask, Alchemy, Infura, Tenderly, Etherscan
+Concepts:          DeFi, Consensus Mechanisms, Tokenomics, Smart Contract 
+                   Auditing, Cryptography Basics
+Soft Skills:       Research Mindset, Problem-Solving, Communication, 
+                   Team Collaboration
+
+================================================================================
+PROJECTS
+================================================================================
+
+BugChan - Decentralized Bug Bounty Platform
+ETHGlobal: Blockscout Prize Winner
+• Developed and deployed Solidity smart contracts handling bounty creation, 
+  staking, escrow, and automated reward distribution
+• Contributed to building a transparent, censorship-resistant Web3 bug bounty 
+  system with encrypted IPFS submissions and on-chain settlement logic using 
+  Hardhat
+
+Sui Loyalty DApp - React, Vite, Sui DApp Kit
+Hash Hunt: Code Deploy Dominate Winner
+• Built a full-stack NFT loyalty card DApp with wallet integration on the 
+  Sui blockchain
+• Designed a seamless user experience using React, Vite, and Sui DApp Kit, 
+  focusing on scalability and decentralization
+• Streamlined real-time emissions tracking and sustainability reporting, 
+  improving decision-making for environmental compliance
+
+DAO Governance Platform - Ethereum-based
+• Built a decentralized governance system enabling proposal creation, voting, 
+  and on-chain execution of approved decisions
+• Developed smart contracts in Solidity using Foundry and integrated with a 
+  React frontend for real-time proposal tracking and treasury management
+• Ensured transparent and democratic decision-making within the DAO
+
+================================================================================
+RESEARCH PAPER & PUBLICATION
+================================================================================
+
+Smart Grid Energy Demand Forecasting with Hybrid LSTM
+• Developed a hybrid LSTM deep learning model for smart grid energy demand 
+  forecasting, trained on 8,760 hourly data points
+• Achieved 1.16% MAE and 90.68% classification accuracy, outperforming 
+  traditional baselines and other deep learning models
+• Deployed the model with TensorFlow Lite on edge devices, reducing inference 
+  latency to 10.14 ms for real-time smart grid operations
+
+================================================================================
+ACHIEVEMENTS & CERTIFICATIONS
+================================================================================
+
+• Winner, ETHGlobal (Blockscout Partner Prize)                    October 2025
+  Recognized for developing a blockchain project integrating Blockscout for 
+  on-chain data visibility and analytics
+
+• Winner – Hash Hunt: Code Deploy Dominate, Sui Foundation          July 2025
+  1st place for Sui Loyalty DApp
+
+• ACM Summer School on IoT & Next-Gen Networks                      June 2024
+
+================================================================================
+LEADERSHIP & ACTIVITIES
+================================================================================
+
+• Treasurer: IOIT ACM Student Chapter                              2023–24
+• Secretary: IOIT ACM Student Chapter                              2024–25
+• Finance Head: Model United Nations (MUNs)
+• Piano Mentor: Trained 300+ students                              2022–26
+• Speaker: College fests & workshops
