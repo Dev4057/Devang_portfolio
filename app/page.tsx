@@ -76,7 +76,9 @@ export default function Home() {
                   Blockchain developer building decentralized solutions at the intersection of
                   <span className="text-foreground"> smart contracts</span>,
                   <span className="text-foreground"> DeFi protocols</span>, and
-                  <span className="text-foreground"> Web3 innovation</span>.
+                  <span className="text-foreground"> Web3 innovation</span>. Also crafting robust
+                  <span className="text-foreground"> backend systems</span> and
+                  <span className="text-foreground"> RESTful APIs</span> that power modern applications.
                 </p>
 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 text-sm text-muted-foreground">
