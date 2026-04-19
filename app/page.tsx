@@ -611,19 +611,6 @@ export default function Home() {
                     <div className="text-sm mt-1">Gig workers · Lenders</div>
                   </div>
                 </div>
-
-                <div className="pt-2">
-                  <p className="text-xs text-muted-foreground">
-                    Don&apos;t see the video?{" "}
-                    <span className="text-foreground">Drop your MP4 at</span>{" "}
-                    <code className="text-foreground font-mono">public/videos/pramaan-demo.mp4</code>
-                    {" "}or set a YouTube URL inside <code className="font-mono">page.tsx</code> (see{" "}
-                    <Link href="/MEDIA_README.md" className="underline">
-                      MEDIA_README.md
-                    </Link>
-                    ).
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -1224,13 +1211,6 @@ export default function Home() {
                 </button>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground">
-              Drop photos into <code className="font-mono">public/images/gallery/</code> — see{" "}
-              <Link href="/MEDIA_README.md" className="underline">
-                MEDIA_README.md
-              </Link>{" "}
-              for exact filenames.
-            </p>
           </div>
         </section>
 
@@ -1324,10 +1304,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8">
             <div className="space-y-2">
               <div className="text-sm text-muted-foreground">
-                © 2026 Devang Gandhi. Designed & built from scratch.
-              </div>
-              <div className="text-xs text-muted-foreground">
-                Next.js · Tailwind CSS · a bit of patience
+                © 2026 Devang Gandhi
               </div>
             </div>
 
