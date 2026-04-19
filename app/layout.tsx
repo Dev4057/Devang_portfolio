@@ -10,7 +10,7 @@ const geist = Geist({
 })
 
 export const metadata: Metadata = {
-  title: "Devang Gandhi — SDE · Web3 Builder · Researcher",
+  title: "Devang Gandhi",
   description:
     "SDE at Tulapi.ai. Full-stack & blockchain builder, ZK-curious, technical writer at Blok Capital, two-time published researcher, and pianist. Winner of ETHGlobal Blockscout Prize.",
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "Pramaan",
   ],
   openGraph: {
-    title: "Devang Gandhi — SDE · Web3 Builder · Researcher",
+    title: "Devang Gandhi",
     description:
       "SDE at Tulapi.ai. ZK, decentralized systems, published research, and a pianist at heart.",
     type: "website",
