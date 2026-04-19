@@ -244,8 +244,8 @@ export default function Home() {
                 full-stack products by day, shipping <span className="text-foreground">decentralized
                   protocols</span> and <span className="text-foreground">ZK-powered systems</span> by
                 night. Researcher, technical writer at{" "}
-                <span className="text-foreground">Blok Capital</span>, and a classically trained
-                pianist who happens to write a lot of Solidity.
+                <span className="text-foreground">Blok Capital</span> detailing their DeFi
+                wealth management protocol, and a classically trained pianist.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm">
@@ -335,8 +335,10 @@ export default function Home() {
                 "Hardhat",
                 "Snowflake",
                 "Python",
-                "EIP-8004",
-                "x402",
+                "DeFi",
+                "EIP-4337",
+                "EIP-77P-4337",
+                "EIP-7702",
                 "Sui Move",
                 "PostgreSQL",
                 "Research",
@@ -396,11 +398,10 @@ export default function Home() {
               </p>
               <p>
                 Outside of work, I live in the{" "}
-                <span className="text-foreground">decentralization</span> space — exploring emerging
-                standards like <span className="text-foreground font-mono text-sm">x402</span> and{" "}
-                <span className="text-foreground font-mono text-sm">EIP-8004</span>, and writing deep
-                technical breakdowns as a Technical Writer at{" "}
-                <span className="text-foreground">Blok Capital</span>.
+                <span className="text-foreground">decentralization</span> space. As a Technical
+                Writer at <span className="text-foreground">Blok Capital</span>, I write deep dives
+                into the internal workings of their decentralized wealth management protocol, detailing
+                how its on-chain architecture and DAO governance continuously evolve the ecosystem.
               </p>
               <p>
                 I&apos;ve co-authored{" "}
@@ -469,8 +470,8 @@ export default function Home() {
                   company: "Blok Capital",
                   period: "2025 — Present",
                   bullets: [
-                    "Writing deep-dive articles on emerging Web3 standards: x402 micropayments, EIP-8004 identity, and L2 ecosystems.",
-                    "Translating complex on-chain primitives into accessible, publishable research.",
+                    "Authoring deep-dive documentation on Blok Capital’s decentralized wealth management protocol, detailing internal smart contract mechanics and EIP implementations (e.g. ERC-4337, EIP-7702).",
+                    "Translating complex on-chain DeFi features, DAO governance upgrades, and core product roadmaps into accessible content for the community.",
                   ],
                 },
                 {
