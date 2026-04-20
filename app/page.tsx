@@ -36,6 +36,9 @@ const SCITEPRESS_PAPER_URL = "https://www.scitepress.org/Papers/2025/placeholder
 // Image paths — drop real photos at the paths below (see /MEDIA_README.md)
 const IMG = {
   hero: "/images/hero/portrait.jpeg",
+  caricature: "/images/hero/caricature.png",
+  about: "/images/hero/about.jpeg",
+  avatar: "/images/avatar.png",
   gallery: {
     piano1: "/images/gallery/piano-1.jpeg",
     piano2: "/images/gallery/piano-2.jpeg",
@@ -63,6 +66,19 @@ export default function Home() {
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false })
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null)
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
+  const caricatureRef = useRef<HTMLDivElement>(null)
+
+  const onCaricatureMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = caricatureRef.current
+    if (!el) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    el.style.transform = `perspective(900px) rotateX(${-y * 8}deg) rotateY(${x * 10}deg) translateZ(0)`
+  }
+  const onCaricatureLeave = () => {
+    if (caricatureRef.current) caricatureRef.current.style.transform = ""
+  }
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark)
@@ -240,7 +256,7 @@ export default function Home() {
               </div>
 
               <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                SDE at <span className="text-foreground font-medium">Tulapi.ai</span> — building
+                SDE at <span className="text-foreground font-medium">Tulapi.ai</span> building
                 full-stack products by day, shipping <span className="text-foreground">decentralized
                   protocols</span> and <span className="text-foreground">ZK-powered systems</span> by
                 night. Researcher, technical writer at{" "}
@@ -387,6 +403,21 @@ export default function Home() {
                 <br />
                 <span className="text-muted-foreground">musician.</span>
               </h2>
+
+              <div className="hidden lg:block relative mt-16 w-full max-w-[400px] aspect-[4/5] mx-auto animate-float">
+                <div className="absolute -inset-4 bg-gradient-to-tr from-violet-500/25 via-fuchsia-500/15 to-sky-500/25 blur-3xl rounded-[2rem]" />
+                <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] border border-border/60 bg-background/40 backdrop-blur-sm">
+                  <Image
+                    src={IMG.about}
+                    alt="Devang on stage with mic"
+                    fill
+                    sizes="(max-width: 1024px) 0px, 400px"
+                    className="object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                </div>
+
+              </div>
             </div>
 
             <div className="lg:col-span-7 space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -436,6 +467,70 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ───────────────────────────── INTERMISSION / FOUR WORLDS ───────────────────────────── */}
+        <section className="relative py-20 sm:py-28 overflow-hidden">
+          <div aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center">
+            <div className="h-[520px] w-[520px] rounded-full blur-3xl opacity-60 bg-gradient-to-br from-violet-500/20 via-fuchsia-500/15 to-sky-500/20" />
+          </div>
+
+          <div className="relative text-center space-y-3 mb-10 sm:mb-14">
+            <div className="text-sm text-muted-foreground font-mono tracking-widest">INTERMISSION</div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight">
+              A day in my <span className="text-gradient">four worlds</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-sm sm:text-base">
+              Ideas sketched in the morning, DeFi protocols by night, Web3 on weekends —
+              and the cloud keeping it all humming.
+            </p>
+          </div>
+
+          <div
+            className="relative mx-auto w-full max-w-xl aspect-square"
+            onMouseMove={onCaricatureMove}
+            onMouseLeave={onCaricatureLeave}
+          >
+            {/* orbit rings */}
+            <div aria-hidden className="absolute inset-[6%] rounded-full border border-dashed border-border/50" />
+            <div aria-hidden className="absolute inset-[18%] rounded-full border border-dashed border-border/30" />
+
+            {/* float wrapper (own transform) */}
+            <div className="absolute inset-0 animate-float">
+              {/* parallax tilt wrapper (own transform, set via ref) */}
+              <div
+                ref={caricatureRef}
+                className="relative h-full w-full transition-transform duration-300 ease-out"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <Image
+                  src={IMG.caricature}
+                  alt="Devang caricature — ideas, DeFi, Web3, cloud"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 520px"
+                  className="object-contain drop-shadow-2xl"
+                />
+              </div>
+            </div>
+
+            {/* floating labels */}
+            <div className="absolute top-2 left-0 sm:-left-4 rounded-2xl border border-border/60 bg-background/80 backdrop-blur px-3.5 py-2 shadow-xl hover:-translate-y-1 hover:border-foreground/40 transition-all">
+              <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">Spark</div>
+              <div className="text-sm font-medium">Ideas → MVP</div>
+            </div>
+            <div className="absolute top-2 right-0 sm:-right-4 rounded-2xl border border-border/60 bg-background/80 backdrop-blur px-3.5 py-2 shadow-xl hover:-translate-y-1 hover:border-foreground/40 transition-all">
+              <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">On-chain</div>
+              <div className="text-sm font-medium">DeFi · Crypto</div>
+            </div>
+            <div className="absolute bottom-2 right-0 sm:-right-2 rounded-2xl border border-border/60 bg-background/80 backdrop-blur px-3.5 py-2 shadow-xl hover:-translate-y-1 hover:border-foreground/40 transition-all">
+              <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">Protocols</div>
+              <div className="text-sm font-medium">ZK · Web3</div>
+            </div>
+            <div className="absolute bottom-2 left-0 sm:-left-2 rounded-2xl border border-border/60 bg-background/80 backdrop-blur px-3.5 py-2 shadow-xl hover:-translate-y-1 hover:border-foreground/40 transition-all">
+              <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">Runtime</div>
+              <div className="text-sm font-medium">Snowflake · Cloud</div>
+            </div>
+          </div>
+        </section>
+
         {/* ───────────────────────────── EXPERIENCE ───────────────────────────── */}
         <section
           id="experience"
@@ -470,7 +565,7 @@ export default function Home() {
                   company: "Blok Capital",
                   period: "2025 — Present",
                   bullets: [
-                    "Authoring deep-dive documentation on Blok Capital’s decentralized wealth management protocol, detailing internal smart contract mechanics and EIP implementations (e.g. ERC-4337, EIP-7702).",
+                    "Authoring deep-dive documentation on Blok Capital’s decentralized wealth management protocol, detailing internal smart contract mechanics and EIP implementations (e.g. ERC-4337, EIP-7702, ERC-2535).",
                     "Translating complex on-chain DeFi features, DAO governance upgrades, and core product roadmaps into accessible content for the community.",
                   ],
                 },
@@ -480,7 +575,7 @@ export default function Home() {
                   period: "2023 — 2025",
                   bullets: [
                     "Led 200+ member student chapter; organized blockchain and development workshops.",
-                    "Managed ₹5L+ annual budget; coordinated sponsorships for hackathons and tech events.",
+                    "Managed ₹3L+ annual budget; coordinated sponsorships for hackathons and tech events.",
                   ],
                 },
                 {
@@ -488,7 +583,7 @@ export default function Home() {
                   company: "Model United Nations",
                   period: "2023 — 2024",
                   bullets: [
-                    "Handled complete financial operations for two large-scale MUN conferences (500+ participants).",
+                    "Handled complete financial operations for two large-scale MUN conferences (300+ participants).",
                   ],
                 },
                 {
